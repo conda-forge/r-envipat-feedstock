@@ -1,4 +1,4 @@
-{% set version = "2.6" %}
+{% set version = "2.8" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/enviPat_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/enviPat/enviPat_{{ version }}.tar.gz
-  sha256: fc6756c465a47337ccbd715bf84e4c8cdfe9eb38623cd6c37ca799e590a7199f
+  sha256: ec945543f005a188d9fdfcbb48a9e66a2ec9fb9e0a432e3ceea2218266860482
 
 build:
-  number: 3
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -41,8 +41,8 @@ test:
 about:
   home: http://www.envipat.eawag.ch/, http://pubs.acs.org/doi/abs/10.1021/acs.analchem.5b00941
   license: GPL-2.0-only
-  summary: Fast and very memory-efficient calculation of isotope patterns, subsequent convolution to theoretical envelopes (profiles) plus valley detection and centroidization or intensoid calculation. Batch processing, resolution interpolation, wrapper, adduct calculations and molecular formula parsing. Loos, M., Gerber,
-    C., Corona, F., Hollender, J., Singer, H. (2015) <doi:10.1021/acs.analchem.5b00941>.
+  summary: Fast and very memory-efficient calculation of isotope patterns, subsequent convolution to theoretical envelopes (profiles) plus valley detection and centroidization or intensoid calculation. Batch processing, resolution interpolation, wrapper, adduct calculations and molecular formula parsing. Loos, M., 
+    Gerber, C., Corona, F., Hollender, J., Singer, H. (2015) <doi:10.1021/acs.analchem.5b00941>.
   license_family: GPL2
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
